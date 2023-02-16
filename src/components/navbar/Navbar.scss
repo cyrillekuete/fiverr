@@ -4,7 +4,21 @@
   background-color: #013914;
   color: white;
   flex-direction: column;
+  transition: 0.5s all ease;
+  position: sticky;
+  top:0;
 
+
+  &.active {
+    background-color: white;
+    color: black;
+
+    button {
+      background-color: white !important;
+      color: #1dbf73 !important;
+      border: 1px solid #1dbf73 !important;
+    }
+  }
   .container {
     width: 1400px;
     display: flex;
@@ -27,6 +41,36 @@
       gap: 24px;
       font-weight: 500;
       font-family: "Montserrat", sans-serif;
+
+      .user{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        cursor:pointer;
+        position:relative;
+
+        img{
+          width:32px;
+          height:32px;
+          border-radius:50%;
+          object-fit: cover;
+        }
+        .options{
+          position:absolute;
+          top:50px;
+          right:0;
+          padding:20px;
+          background-color:white;
+          border: 1px solid lightgray;
+          border-radius:10px;
+          display:flex;
+          flex-direction:column;
+          gap:10px;
+          color:gray;
+          width:200px;
+          font-weight: 300;
+        }
+      }
 
       button {
         color: white;
